@@ -4,11 +4,11 @@ const dotenv = require("dotenv")
 
 dotenv.config()
 
-const {DB_HOST, PORT = 3001} = process.env
+const {MONGO_URL, PORT = 3001} = process.env
 
 ;(async () => {
   try {
-    await mongoose.connect(DB_HOST)
+    await mongoose.connect(MONGO_URL)
     console.log("Успешное подключение к базе данных")
   } catch (err) {
     console.log(err.message)
