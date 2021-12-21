@@ -8,7 +8,6 @@ mongoose
   .connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
   .then(() => app.listen(PORT, () => console.log("Server up and running!")))
   .catch(error => console.log(error.message))
-mongoose.set("useFindAndModify", false)
 
 // dotenv.config()
 
